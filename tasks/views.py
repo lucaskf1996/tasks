@@ -7,4 +7,5 @@ from .models import Task
 
 def index(request):
     all_tasks = Task.objects.all()
+    print(all_tasks)
     return HttpResponse(all_tasks)
