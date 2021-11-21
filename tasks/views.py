@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.http import JsonResponse
 from .models import Task
 
 # Create your views here.
@@ -8,4 +8,4 @@ from .models import Task
 def index(request):
     all_tasks = Task.objects.all()
     print(all_tasks)
-    return HttpResponse(all_tasks)
+    return JsonResponse(all_tasks)
