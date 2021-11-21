@@ -7,4 +7,4 @@ from .models import Task
 
 def index(request):
     all_tasks = Task.objects.all()
-    return JsonResponse(all_tasks)
+    return JsonResponse(all_tasks, safe=False)
