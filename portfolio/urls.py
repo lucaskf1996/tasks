@@ -8,5 +8,5 @@ router.register(r'tasks', TasksViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include(routers.urls)),
+    path('', include(router.urls)),
 ]
