@@ -1,7 +1,7 @@
 from django.db.models import query
 from rest_framework import viewsets
 from .models import Task
-from serializer import TaskSerializer
+from .serializer import TaskSerializer
 
 # def index(request):
 #     all_tasks = Task.objects.all()
