@@ -1,10 +1,12 @@
-from django.shortcuts import render
-from django.http import JsonResponse
+from django.db.models import query
+from rest_framework import viewsets
 from .models import Task
+from serializer import TaskSerializer
 
-# Create your views here.
+# def index(request):
+#     all_tasks = Task.objects.all()
+#     return HttpResponse(all_tasks)
 
-
-def index(request):
-    all_tasks = Task.objects.all()
-    return JsonResponse(all_tasks, safe=False)
+class TasksViewSet(viewsets.ModelViewSet):
+    queryset = Task.objects.all()
+    serializer_class = TaskSerializer
